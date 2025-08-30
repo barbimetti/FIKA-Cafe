@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina | FIKA Café</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand logo" href="./index.html">FIKA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFika"
+                    aria-controls="navbarFika" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarFika">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link activo" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- PORTADA -->
+        <section class="portada">
+            <div class="container text-center">
+                <div class="texto">
+                    <h1>BIENVENIDOS A FIKA</h1>
+                    <p>Tomate un momento para vos. En FIKA te invitamos a pausar, conectar y disfrutar de un café con
+                        alma.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES DEL MES -->
+        <section class="productos-especialidades">
+            <div class="container">
+                <h2 class="text-center mb-4">Los recomendados por el chef</h2>
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <article class="producto d-flex flex-column h-100">
+                            <div class="imagen">
+                                <img src="assets/img/Matcha latte.jpg" class="img-pequeña img-fluid"
+                                    alt="Taza-de-Matcha-latte-servido-en-FIKA">
+                            </div>
+                            <div class="texto">
+                                <h3>Matcha latte</h3>
+                                <p>Es una opción suave, energizante y diferente. Está hecho con té verde japonés y leche
+                                    vegetal o entera.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="producto d-flex flex-column h-100">
+                            <div class="imagen">
+                                <img src="assets/img/cheesecake.jpg" class="img-pequeña img-fluid"
+                                    alt="Cheesecake-con-topping-de-pistacho">
+                            </div>
+                            <div class="texto">
+                                <h3>Cheesecake</h3>
+                                <p>Con una base de galletas horneadas, que destaca el equilibrio perfecto entre la
+                                    cremosidad del queso y el sabor intenso del pistacho.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="producto d-flex flex-column h-100">
+                            <div class="imagen">
+                                <img src="assets/img/Crepes de dulce de leche.jpg" class="img-pequeña img-fluid"
+                                    alt="Crepes-de-dulce-de-leche-con-topping-de-oreo-y-chips-de-chocolate">
+                            </div>
+                            <div class="texto">
+                                <h3>Crepes de dulce de leche</h3>
+                                <p>Masa fina donde este mes destaco el crepe de dulce de leche con topping de oreo y
+                                    chips de chocolate finalizando con una salsa de chocolate.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALORES / FILOSOFÍA -->
+        <section class="sobre-fika py-5">
+            <div class="container">
+                <h2 class="text-center">SOBRE FIKA</h2>
+                <p class="text-center">Más que café. Un espacio para encontrarte, crear y disfrutar.</p>
+                <p>FIKA nace como un refugio urbano donde el café, las ideas y las personas se conectan. Inspirado en la
+                    tradición sueca de tomarse una pausa significativa, creamos un espacio amigable para relajarte,
+                    trabajar, inspirarte y compartir.</p>
+
+                <!-- Sección de valores -->
+                <div class="row gy-4 mt-4 text-center">
+                    <div class="col-md-4">
+                        <div class="valor">
+                            <img src="../assets/img/calidad.png" class="img-icono" alt="Calidad">
+                            <h3>Calidad</h3>
+                            <p>Siempre ofreciendo productos y servicios que cumplen con los más altos estándares.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="valor">
+                            <img src="../assets/img/comunidad.png" class="img-icono" alt="Comunidad">
+                            <h3>Comunidad</h3>
+                            <p>Fomentamos la conexión entre personas y el sentido de pertenencia.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="valor">
+                            <img src="../assets/img/equilibrio.png" class="img-icono" alt="Equilibrio">
+                            <h3>Equilibrio</h3>
+                            <p>Equilibramos tradición y modernidad para experiencias auténticas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta text-center py-5">
+            <div class="container">
+                <h2>¡Tomate un momento para vos!</h2>
+                <p>Reservá tu espacio y disfrutá de una experiencia FIKA única.</p>
+                <a href="./pages/contacto.html" class="btn-comprar">Reservar ahora</a>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="testimonios py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+                <div class="row gy-4 justify-content-center align-items-center">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <article class="testimonial h-100 flex-fill">
+                            <p>"El ambiente de FIKA me inspira a crear y relajarme al mismo tiempo. ¡Me encanta!"</p>
+                            <span>- Ana P.</span>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <article class="testimonial h-100 flex-fill">
+                            <p>"Cada visita es una experiencia única, desde el café hasta la atención del personal."</p>
+                            <span>- Lucas M.</span>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <article class="testimonial h-100 flex-fill">
+                            <p>"Me encanta venir con mis amigos, siempre encontramos un espacio cómodo y acogedor."</p>
+                            <span>- Mariana R.</span>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <article class="testimonial h-100 flex-fill">
+                            <p>"El Matcha latte es espectacular, y el ambiente invita a trabajar y relajarse a la vez."
+                            </p>
+                            <span>- Javier T.</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESCUBRÍ NUESTRO ESPACIO -->
+        <section class="espacio py-5">
+            <div class="container">
+                <h2 class="text-center">Descubrí nuestro espacio</h2>
+                <p>En FIKA diseñamos cada rincón para que te sientas como en casa. Ya sea que vengas a trabajar, a
+                    compartir una charla o simplemente a disfrutar un buen café, nuestro espacio está pensado para
+                    acompañarte.</p>
+                <p>Porque una pausa también puede ser productiva, creativa y deliciosa.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-3">
+        <div class="contenedor footer-redes d-flex justify-content-center gap-3 mb-2">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contenedor text-center">
+            <p class="footer-texto">© 2025 FIKA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (para navbar responsive) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
