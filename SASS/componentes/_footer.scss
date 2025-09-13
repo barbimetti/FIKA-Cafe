@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: v.$gap-md;
+    padding: v.$gap-md v.$gap-lg;
+    background-color: v.$vino;
+    color: v.$blanco;
+
+    a,
+    .footer-texto {
+        color: v.$blanco;
+    }
+}

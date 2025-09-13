@@ -1,615 +1,634 @@
-/* ---------------------- FIKA - Estilos principales ------------------------ */
-/* ------ TIPOGRAFÍAS ------ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* ------ VARIABLES DE COLORES ------ */
-:root {
-    --vino: #581318;
-    /* Color principal */
-    --blanco: #f2f2f2;
-    /* Fondo claro */
-    --beige: #F5F0E6;
-    /* Fondo general */
-    --gris: #2f2f2f;
-    /* Texto secundario */
-    --beige-claro: #f2e0c9;
-    /* Fondos suaves */
-    --beige-medio: #EADBC8;
-    /* Fondos medios */
-    --hover-vino: #400d11;
-    /* Hover botones */
-}
-
-/* ------ GENERALES BÁSICOS ------ */
+@charset "UTF-8";
+/* ---------------------- VARIABLES DE COLORES ---------------------- */
+/* ---------------------- VARIABLES DE TIPOGRAFÍA ---------------------- */
+/* ---------------------- VARIABLES DE TAMAÑOS ---------------------- */
+/* ---------------------- VARIABLES DE ESPACIADOS ---------------------- */
+/* ---------------------- VARIABLES DE BORDES ---------------------- */
+/* ---------------------- VARIABLES DE GRID/FLEX ---------------------- */
+/* ---------------------- VARIABLES DE IMÁGENES ---------------------- */
+/* ---------------------- VARIABLES DE BOTONES ---------------------- */
+/* ---------------------- VARIABLES DE MEDIA QUERIES ---------------------- */
+/* FLEX CENTER */
+/* TRANSITION */
+/* BOTÓN ESTÁNDAR */
+/* CARD GENÉRICA */
+/* IMG ESTÁNDAR */
+/* CONTAINER MÁXIMO */
+/* FORMULARIO ESTÁNDAR */
+/* MEDIA QUERIES */
+/* TEXT ALIGN */
+/* MARGIN BOTTOM */
+/* ---------------------- RESET / GENERALES ---------------------- */
+/* Reset global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    /* Fuente base */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* Body */
 body {
-    background-color: var(--beige);
-    color: var(--gris);
-    font-size: 16px;
-    line-height: 1.6;
+  background-color: #F5F0E6;
+  color: #2f2f2f;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+/* Contenedor principal */
 .contenedor {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 10px 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
+/* Listas */
 li {
-    list-style: none;
+  list-style: none;
 }
 
+/* Párrafos */
 p {
-    margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
-/* ------ HEADER ------ */
+/* ---------------------- HEADER ---------------------- */
 header {
-    background-color: var(--beige-claro);
-    /* Fondo header */
-    padding: 0.3rem 0;
-    z-index: 999;
-    position: relative;
+  background-color: #f2e0c9;
+  padding: 0.3rem 0;
+  position: relative;
+  z-index: 999;
 }
 
 #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--vino);
+  font-size: 30px;
+  font-weight: 600;
+  color: #581318;
 }
 
 #header,
 nav ul {
-    display: flex;
-    align-items: center;
-    column-gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
 }
 
 #header,
 nav a {
-    color: var(--vino);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
+  color: #581318;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-/* Para navbar en desktop/tablet/móvil */
+/* Navbar general */
 .navbar {
-    background-color: var(--beige-claro) !important;
+  background-color: #f2e0c9 !important;
 }
-
 .navbar .nav-link {
-    color: var(--vino) !important;
-    font-weight: bold;
+  color: #581318 !important;
+  font-weight: bold;
 }
-
 .navbar .nav-link:hover {
-    color: var(--gris) !important;
+  color: #2f2f2f !important;
 }
 
-/* ------ TÍTULOS ------ */
-h1,
-h2,
-h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--vino);
-    margin-bottom: 0.8rem;
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #581318;
+  color: #f2f2f2;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin: 1.5rem 0;
+.footer-redes,
+.footer-texto {
+  color: #f2f2f2;
 }
 
-h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
-}
-
-h3 {
-    font-size: 1.4rem;
-    color: var(--gris);
-}
-
-/* ------ IMÁGENES ------ */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Clases específicas de imágenes */
-.img-pequeña {
-    width: 200px;
-}
-
-/* Iconos pequeños o fotos secundarias */
-.img-icono {
-    width: 60px;
-    height: auto;
-}
-
-.tienda-img img {
-    border: 2px solid var(--vino);
-}
-
-/* ------ BOTONES ------ */
+/* ---------------------- BOTONES ---------------------- */
 button,
 .btn-comprar,
 .btn-reserva,
 .btn-enviar {
-    background-color: var(--vino);
-    color: var(--blanco);
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 8px 15px;
-    text-decoration: none;
-    transition: 0.3s;
+  background-color: #581318;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
 }
-
-.btn-comprar,
-.btn-reserva,
-.btn-enviar {
-    width: 100px;
-}
-
 button:hover,
 .btn-comprar:hover,
 .btn-reserva:hover,
 .btn-enviar:hover {
-    background-color: var(--hover-vino);
+  background-color: #400d11;
 }
 
-/* ------ FORMULARIOS ------ */
+/* Botones específicos con width fijo */
+.btn-comprar,
+.btn-reserva,
+.btn-enviar {
+  width: 100px;
+}
+
+/* ---------------------- FORMULARIOS ---------------------- */
+/* Contenedor de formulario */
 .formulario {
-    padding: 1rem;
-    background-color: #e6d3c9;
-    /* Fondo formulario */
-    border-radius: 8px;
-    border: 2px solid var(--vino);
-}
-
-/* Formulario principal */
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #e6d3c9;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 0;
-    padding: 1rem;
-    border: 2px solid var(--vino);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6d3c9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid #581318;
 }
 
 /* Labels para inputs */
-form>label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--vino);
+form > label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #581318;
 }
 
 /* Inputs y textarea */
-form>input,
-form>textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: #F5F0E6;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+form > input,
+form > textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #F5F0E6;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
 }
 
-/* ------ LAYOUTS GENERALES POR SECCIÓN ------ */
-/* Hero / Portada */
-.portada .texto {
-    text-align: center;
+/* Inputs y textarea al foco */
+form > input:focus,
+form > textarea:focus {
+  outline: none;
+  border-color: #581318;
+  box-shadow: 0 0 5px rgba(88, 19, 24, 0.5);
 }
 
-/* Especialidades del mes */
-.productos-especialidades .flex-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+/* Botón de enviar dentro de formularios */
+form button,
+form .btn-enviar {
+  background-color: #581318;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover,
+form .btn-enviar:hover {
+  background-color: #400d11;
 }
 
-/* homogeneizar altura */
-.productos-especialidades .producto .imagen {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+  .formulario {
+    max-width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .formulario {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+}
+/* ---------------------- TÍTULOS ---------------------- */
+/* Estilos generales para todos los títulos */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #581318;
+  margin-bottom: 0.8rem;
 }
 
-.productos-especialidades .producto .imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 60%;
-    border-radius: 12px;
+/* H1 */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
 }
 
-/* Valores / Filosofía */
-.valores-fika {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    gap: 5rem;
-    text-align: center;
+/* H2 */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
 }
 
-.valor .img-icono {
-    margin-bottom: 0.5rem;
+/* H3 */
+h3 {
+  font-size: 1.4rem;
+  color: #2f2f2f;
+  margin-bottom: 0.5rem;
 }
 
-/* CTA */
-.cta {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-/* Testimonios */
-.testimonios .testimonios-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.testimonios .testimonial {
-    background-color: var(--beige-claro);
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--vino);
-    max-width: 300px;
-    flex: 1 1 250px;
-}
-
-.testimonios .testimonial p {
-    margin-bottom: 0.5rem;
-}
-
-.testimonios .testimonial span {
-    font-weight: bold;
-    color: var(--vino);
-}
-
-/* Descubrí nuestro espacio */
-.espacio p {
-    margin-bottom: 0.8rem;
-}
-
-/* Card producto */
+/* ---------------------- PRODUCTOS ---------------------- */
+/* Card producto genérica */
 .producto {
-    background-color: var(--blanco);
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid var(--vino);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 1px solid #581318;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .producto h3 {
-    margin-bottom: 0.3rem;
-    color: var(--vino);
+  margin-bottom: 0.3rem;
+  color: #581318;
 }
-
 .producto p {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }
-
 .producto span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.producto .imagen {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.producto .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
 }
 
 /* Producto del mes / columna derecha */
 .producto-mes {
-    flex: 1;
-    background-color: var(--blanco);
-    padding: 1rem;
-    border-radius: 12px;
-    border: 2px solid var(--vino);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  background-color: #f2f2f2;
+  border: 2px solid #581318;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 .producto-mes h3 {
-    margin-bottom: 0.5rem;
-    color: var(--vino);
+  margin-bottom: 0.5rem;
+  color: #581318;
 }
-
 .producto-mes p {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
-
-.producto-mes img {
-    border-radius: 12px;
-    max-height: 350px;
-    object-fit: cover;
-    width: 100%;
-}
-
-
 .producto-mes span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--gris);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2f2f2f;
+}
+.producto-mes img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  max-height: 350px;
 }
 
-/* ------ FONDOS SUAVES POR TIPO DE TUESTE Y PACKS ------ */
+/* Fondos suaves por tipo de tueste */
 .tostado-suave {
-    background-color: var(--beige);
-    padding: 2rem 0;
+  background-color: #F5F0E6;
+  padding: 2rem 0;
 }
 
 .tostado-medio {
-    background-color: var(--beige-medio);
-    padding: 2rem 0;
+  background-color: #EADBC8;
+  padding: 2rem 0;
 }
 
 .tostado-intenso {
-    background-color: var(--beige);
-    padding: 2rem 0;
+  background-color: #F5F0E6;
+  padding: 2rem 0;
 }
 
 .bloque-productos.pack {
-    background-color: var(--beige-medio);
-    padding: 2rem 0;
+  background-color: #EADBC8;
+  padding: 2rem 0;
 }
 
-/* ---- NOSOTROS ---- */
+/* ---------------------- PORTADA / HERO ---------------------- */
+.portada .texto {
+  text-align: center;
+}
+
+/* Especialidades del mes */
+.productos-especialidades .flex-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.productos-especialidades .producto .imagen {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.productos-especialidades .producto .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  object-position: center 60%;
+}
+
+/* Valores / Filosofía */
+.valores-fika {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 5rem;
+  text-align: center;
+}
+.valores-fika .valor .img-icono {
+  margin-bottom: 0.5rem;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+
+/* Testimonios */
+.testimonios .testimonios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.testimonios .testimonial {
+  background-color: #f2e0c9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #581318;
+  max-width: 300px;
+  flex: 1 1 250px;
+}
+.testimonios .testimonial p {
+  margin-bottom: 0.5rem;
+}
+.testimonios .testimonial span {
+  font-weight: bold;
+  color: #581318;
+}
+
+/* Descubrí nuestro espacio */
+.espacio p {
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------- CONTACTO ---------------------- */
+/* Grid principal del contacto */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Columnas de reserva y sugerencia */
+.reserva-col,
+.sugerencia-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #EADBC8;
+  border: 1px solid #581318;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Columna derecha de contacto */
+.contacto-derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #f2e0c9;
+  border: 1px solid #581318;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Formulario dentro de reserva */
+.reserva-col .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6d3c9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid #581318;
+  flex: 1;
+  width: 100%;
+}
+
+/* ---------------------- NOSOTROS ---------------------- */
+/* Hero Nosotros */
 .hero-nosotros {
-    background-color: var(--beige);
-    padding: 4rem 2rem;
-    text-align: center;
+  background-color: #F5F0E6;
+  padding: 4rem 2rem;
+  text-align: center;
 }
-
 .hero-nosotros h1 {
-    font-size: 2.5rem;
-    color: var(--vino);
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #581318;
+  margin-bottom: 1rem;
 }
-
 .hero-nosotros p {
-    font-size: 1.2rem;
-    color: var(--gris);
+  font-size: 1.2rem;
+  color: #2f2f2f;
 }
 
 /* Misión y Visión */
 .mision-vision h2 {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
-
 .mision-vision p {
-    max-width: 700px;
-    margin: 0.5rem auto 2rem auto;
-    color: var(--gris);
+  max-width: 700px;
+  margin: 0.5rem auto 2rem auto;
+  color: #2f2f2f;
 }
 
 /* Equipo / Espacio */
 .equipo-espacio .flex-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
+/* Tres columnas */
 .tres-columnas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
 }
-
 .tres-columnas img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .equipo-espacio img {
-    border-radius: 12px;
-    height: 300px;
-    object-fit: cover;
-    max-width: 100%;
+  border-radius: 12px;
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
 }
 
-/* Valores en Grid */
+/* Valores en grid */
 .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
-
 .valores-grid .valor img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 0.5rem;
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
-
 .valores-grid .valor h3 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.3rem;
-    color: var(--vino);
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  color: #581318;
 }
-
 .valores-grid .valor p {
-    font-size: 0.95rem;
-    color: var(--gris);
+  font-size: 0.95rem;
+  color: #2f2f2f;
 }
 
+/* Grid de dos columnas */
 .grid-dos-columnas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
-/* ------ FOOTER ------- */
-footer {
-    display: flex;
+@media (max-width: 1024px) {
+  .productos-especialidades .producto {
+    justify-content: flex-start;
+  }
+  .productos-especialidades .producto .texto {
+    margin-top: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  header .header {
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--vino);
-    color: var(--blanco);
-}
-
-.footer-redes a,
-.footer-texto {
-    color: var(--blanco);
-}
-
-/* ------ CONTACTO ------ */
-.contacto-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    align-items: stretch;
-}
-
-.reserva-col,
-.sugerencia-col {
-    display: flex;
+  }
+  .header nav ul {
     flex-direction: column;
-    gap: 2rem;
-    background-color: var(--beige-medio);
-    border: 1px solid var(--vino);
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-.contacto-derecha {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: var(--beige-claro);
-    border: 1px solid var(--vino);
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-.reserva-col .formulario {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .tres-columnas {
+    grid-template-columns: 1fr;
+  }
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+  .productos-dos-columnas {
+    gap: 1rem;
+  }
+  .producto-mes {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .productos-nosotros .grid-dos-columnas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .productos-nosotros .grid-dos-columnas > div {
+    width: 100%;
+    text-align: center;
+  }
+  .productos-nosotros .grid-dos-columnas img {
+    width: auto;
+    max-width: 200px;
+    height: auto;
+  }
+  .producto-mes img {
+    max-height: 200px;
+    height: auto;
+  }
+  .testimonios .testimonios-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1.5rem;
+  }
+  .testimonios .testimonial {
+    max-width: 90%;
+  }
 }
 
-
-
-/* ------ RESPONSIVE ------ */
-
-@media(max-width:1024px) {
-
-    /* Ajuste de cards de Recomendaciones del Chef */
-    .productos-especialidades .producto {
-        justify-content: flex-start;
-    }
-
-    .productos-especialidades .producto .texto {
-        margin-top: 0.8rem;
-    }
-}
-
-/* Móviles */
-@media(max-width:768px) {
-    header .header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .header nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .tres-columnas {
-        grid-template-columns: 1fr;
-    }
-
-    .valores-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contacto-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .productos-dos-columnas {
-        gap: 1rem;
-    }
-
-
-    .producto-mes {
-        width: 100%;
-    }
-
-    .productos-nosotros .grid-dos-columnas {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .productos-nosotros .grid-dos-columnas>div {
-        width: 100%;
-        text-align: center;
-    }
-
-    .productos-nosotros .grid-dos-columnas img {
-        width: auto;
-        max-width: 200px;
-        height: auto;
-    }
-
-    .producto-mes img {
-        max-height: 200px;
-        height: auto;
-    }
-
-    .testimonios .testimonios-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        gap: 1.5rem;
-    }
-
-    .testimonios .testimonial {
-        max-width: 90%;
-    }
-}
+/*# sourceMappingURL=style.css.map */

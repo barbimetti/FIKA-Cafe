@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$fuente-principal;
+}
+
+body {
+    background-color: v.$beige;
+    color: v.$gris;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin-bottom: 0.3rem;
+}
+
+.contenedor {
+    max-width: v.$max-width;
+    margin: 0 auto;
+    padding: 10px 20px;
+}

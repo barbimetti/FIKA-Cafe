@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+button,
+.btn-comprar,
+.btn-reserva,
+.btn-enviar {
+    background-color: v.$vino;
+    color: v.$blanco;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 15px;
+    text-decoration: none;
+    @include m.transition(0.3s);
+
+    &:hover {
+        background-color: v.$hover-vino;
+    }
+}
+
+.btn-comprar,
+.btn-reserva,
+.btn-enviar {
+    width: 100px;
+}
