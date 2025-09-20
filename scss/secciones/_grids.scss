@@ -1,0 +1,33 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+/* ------ GRIDS ------ */
+.valores-grid {
+    @include m.grid-gen($auto-fit: true, $min: 180px, $gap: v.$gap-lg, $text-align: center);
+    margin-top: v.$gap-lg;
+}
+
+.valores-grid {
+    .valor {
+        img {
+            width: 60px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.3rem;
+            color: v.$vino;
+        }
+        p {
+            font-size: 0.95rem;
+            color: v.$gris;
+        }
+    }
+}
+
+//* Grid de 2 columnas *//
+.grid-dos-columnas {
+    @include m.grid-gen($columns: repeat(2, 1fr), $gap: v.$gap-lg);
+}

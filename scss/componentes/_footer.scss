@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ FOOTER ------- */
+footer {
+    @include m.flex-gen (column);
+    @include m.contenedor-form (v.$vino, v.$gap-md v.$gap-lg, null, null, v.$gap-md); 
+    color: v.$blanco;
+}
+
+.footer-redes a,
+.footer-texto {
+    color: v.$blanco;
+}

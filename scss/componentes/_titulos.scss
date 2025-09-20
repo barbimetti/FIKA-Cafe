@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ TÍTULOS ------ */
+h1,
+h2,
+h3 {
+    @include m.titulo($color: v.$vino, $family: v.$fuente-titulos);
+}
+
+h1 {
+    @include m.titulo($size: 2.2rem, $align: center, $margin: 1.5rem);
+}
+
+h2 {
+    @include m.titulo($size: 1.8rem, $align: center, $margin: v.$gap-lg 0 v.$gap-md);
+}
+
+h3 {
+    @include m.titulo($size: 1.4rem, $color: v.$gris);
+}
+
+.titulo-menu {
+    text-align: left;
+    margin-top: v.$gap-xl;
+}

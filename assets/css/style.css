@@ -1,25 +1,5 @@
 @charset "UTF-8";
-/* ---------------------- VARIABLES DE COLORES ---------------------- */
-/* ---------------------- VARIABLES DE TIPOGRAFÍA ---------------------- */
-/* ---------------------- VARIABLES DE TAMAÑOS ---------------------- */
-/* ---------------------- VARIABLES DE ESPACIADOS ---------------------- */
-/* ---------------------- VARIABLES DE BORDES ---------------------- */
-/* ---------------------- VARIABLES DE GRID/FLEX ---------------------- */
-/* ---------------------- VARIABLES DE IMÁGENES ---------------------- */
-/* ---------------------- VARIABLES DE BOTONES ---------------------- */
-/* ---------------------- VARIABLES DE MEDIA QUERIES ---------------------- */
-/* FLEX CENTER */
-/* TRANSITION */
-/* BOTÓN ESTÁNDAR */
-/* CARD GENÉRICA */
-/* IMG ESTÁNDAR */
-/* CONTAINER MÁXIMO */
-/* FORMULARIO ESTÁNDAR */
-/* MEDIA QUERIES */
-/* TEXT ALIGN */
-/* MARGIN BOTTOM */
-/* ---------------------- RESET / GENERALES ---------------------- */
-/* Reset global */
+/* ------ GENERALES BÁSICOS ------ */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +7,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* Body */
 body {
   background-color: #F5F0E6;
   color: #2f2f2f;
@@ -35,29 +14,31 @@ body {
   line-height: 1.6;
 }
 
-/* Contenedor principal */
 .contenedor {
   max-width: 1140px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 
-/* Listas */
 li {
   list-style: none;
 }
 
-/* Párrafos */
 p {
   margin-bottom: 0.3rem;
 }
 
-/* ---------------------- HEADER ---------------------- */
+/* ------ HEADER ------ */
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: #581318;
+}
+
 header {
   background-color: #f2e0c9;
   padding: 0.3rem 0;
   position: relative;
-  z-index: 999;
 }
 
 #header {
@@ -65,33 +46,21 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: 600;
-  color: #581318;
-}
-
-#header,
-nav ul {
+#header nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  column-gap: 15px;
 }
-
-#header,
-nav a {
+#header nav a {
   color: #581318;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
 }
 
-/* Navbar general */
+/* Para navbar en desktop/tablet/móvil */
 .navbar {
   background-color: #f2e0c9 !important;
 }
@@ -103,24 +72,22 @@ nav a {
   color: #2f2f2f !important;
 }
 
-/* ---------------------- FOOTER ---------------------- */
+/* ------ FOOTER ------- */
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem 2rem;
   background-color: #581318;
+  padding: 1rem 2rem;
+  gap: 1rem;
   color: #f2f2f2;
 }
 
-.footer-redes,
+.footer-redes a,
 .footer-texto {
   color: #f2f2f2;
 }
 
-/* ---------------------- BOTONES ---------------------- */
+/* ------ BOTONES ------ */
 button,
 .btn-comprar,
 .btn-reserva,
@@ -130,10 +97,10 @@ button,
   border: none;
   border-radius: 6px;
   padding: 8px 15px;
+  width: auto;
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
-  width: 100px;
   transition: all 0.3s ease-in-out;
 }
 button:hover,
@@ -143,36 +110,36 @@ button:hover,
   background-color: #400d11;
 }
 
-/* Botones específicos con width fijo */
 .btn-comprar,
 .btn-reserva,
 .btn-enviar {
   width: 100px;
 }
 
-/* ---------------------- FORMULARIOS ---------------------- */
-/* Contenedor de formulario */
-.formulario {
+/* ------ FORMULARIOS ------ */
+.formulario,
+form {
+  background-color: #e6d3c9;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 2px solid #581318;
+}
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e6d3c9;
-  border-radius: 8px;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 2px solid #581318;
+  margin: 0;
 }
 
-/* Labels para inputs */
 form > label {
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #581318;
 }
 
-/* Inputs y textarea */
 form > input,
 form > textarea {
   width: 100%;
@@ -180,92 +147,49 @@ form > textarea {
   background-color: #F5F0E6;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 0.5rem;
 }
 
-/* Inputs y textarea al foco */
-form > input:focus,
-form > textarea:focus {
-  outline: none;
-  border-color: #581318;
-  box-shadow: 0 0 5px rgba(88, 19, 24, 0.5);
-}
-
-/* Botón de enviar dentro de formularios */
-form button,
-form .btn-enviar {
-  background-color: #581318;
-  color: #f2f2f2;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  width: 100px;
-  transition: all 0.3s ease-in-out;
-}
-form button:hover,
-form .btn-enviar:hover {
-  background-color: #400d11;
-}
-
-/* Ajustes responsive */
-@media (max-width: 1024px) {
-  .formulario {
-    max-width: 90%;
-  }
-}
-@media (max-width: 768px) {
-  .formulario {
-    max-width: 100%;
-    padding: 0.8rem;
-  }
-}
-/* ---------------------- TÍTULOS ---------------------- */
-/* Estilos generales para todos los títulos */
+/* ------ TÍTULOS ------ */
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
   color: #581318;
-  margin-bottom: 0.8rem;
+  font-family: "Playfair Display", seriff;
 }
 
-/* H1 */
 h1 {
-  text-align: center;
   font-size: 2.2rem;
-  margin: 1.5rem 0;
-}
-
-/* H2 */
-h2 {
   text-align: center;
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem 0;
+  margin: 1.5rem;
 }
 
-/* H3 */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
 h3 {
   font-size: 1.4rem;
   color: #2f2f2f;
-  margin-bottom: 0.5rem;
 }
 
-/* ---------------------- PRODUCTOS ---------------------- */
-/* Card producto genérica */
+.titulo-menu {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+/* ------ PRODUCTOS ------ */
 .producto {
-  background-color: #f2f2f2;
-  border: 1px solid #581318;
-  border-radius: 12px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #581318;
 }
+
 .producto h3 {
   margin-bottom: 0.3rem;
   color: #581318;
@@ -279,37 +203,20 @@ h3 {
   display: block;
   margin-bottom: 0.5rem;
 }
-.producto .imagen {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-}
-.producto .imagen img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 60%;
-}
 
-/* Producto del mes / columna derecha */
 .producto-mes {
-  background-color: #f2f2f2;
-  border: 2px solid #581318;
-  border-radius: 12px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #581318;
+  flex: 1;
 }
+
 .producto-mes h3 {
   margin-bottom: 0.5rem;
   color: #581318;
@@ -318,227 +225,45 @@ h3 {
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
+.producto-mes img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  max-width: 100%;
+  display: block;
+}
 .producto-mes span {
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
   color: #2f2f2f;
 }
-.producto-mes img {
+
+/* ------ IMÁGENES ------ */
+img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   object-fit: cover;
-  object-position: center;
-  max-height: 350px;
-}
-
-/* Fondos suaves por tipo de tueste */
-.tostado-suave {
-  background-color: #F5F0E6;
-  padding: 2rem 0;
-}
-
-.tostado-medio {
-  background-color: #EADBC8;
-  padding: 2rem 0;
-}
-
-.tostado-intenso {
-  background-color: #F5F0E6;
-  padding: 2rem 0;
-}
-
-.bloque-productos.pack {
-  background-color: #EADBC8;
-  padding: 2rem 0;
-}
-
-/* ---------------------- PORTADA / HERO ---------------------- */
-.portada .texto {
-  text-align: center;
-}
-
-/* Especialidades del mes */
-.productos-especialidades .flex-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-.productos-especialidades .producto .imagen {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-}
-.productos-especialidades .producto .imagen img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
-  object-position: center 60%;
-}
-
-/* Valores / Filosofía */
-.valores-fika {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  gap: 5rem;
-  text-align: center;
-}
-.valores-fika .valor .img-icono {
-  margin-bottom: 0.5rem;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-}
-
-/* Testimonios */
-.testimonios .testimonios-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-.testimonios .testimonial {
-  background-color: #f2e0c9;
-  padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #581318;
-  max-width: 300px;
-  flex: 1 1 250px;
-}
-.testimonios .testimonial p {
-  margin-bottom: 0.5rem;
-}
-.testimonios .testimonial span {
-  font-weight: bold;
-  color: #581318;
-}
-
-/* Descubrí nuestro espacio */
-.espacio p {
-  margin-bottom: 0.8rem;
-}
-
-/* ---------------------- CONTACTO ---------------------- */
-/* Grid principal del contacto */
-.contacto-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-/* Columnas de reserva y sugerencia */
-.reserva-col,
-.sugerencia-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  background-color: #EADBC8;
-  border: 1px solid #581318;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-/* Columna derecha de contacto */
-.contacto-derecha {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  background-color: #f2e0c9;
-  border: 1px solid #581318;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-/* Formulario dentro de reserva */
-.reserva-col .formulario {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #e6d3c9;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 2px solid #581318;
-  flex: 1;
-  width: 100%;
-}
-
-/* ---------------------- NOSOTROS ---------------------- */
-/* Hero Nosotros */
-.hero-nosotros {
-  background-color: #F5F0E6;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.hero-nosotros h1 {
-  font-size: 2.5rem;
-  color: #581318;
-  margin-bottom: 1rem;
-}
-.hero-nosotros p {
-  font-size: 1.2rem;
-  color: #2f2f2f;
-}
-
-/* Misión y Visión */
-.mision-vision h2 {
-  margin-bottom: 0.8rem;
-}
-.mision-vision p {
-  max-width: 700px;
-  margin: 0.5rem auto 2rem auto;
-  color: #2f2f2f;
-}
-
-/* Equipo / Espacio */
-.equipo-espacio .flex-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-/* Tres columnas */
-.tres-columnas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-.tres-columnas img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.equipo-espacio img {
-  border-radius: 12px;
-  height: 300px;
-  object-fit: cover;
   max-width: 100%;
+  display: block;
 }
 
-/* Valores en grid */
+.img-pequeña {
+  width: 200px;
+}
+
+.img-icono {
+  width: 60px;
+  height: auto;
+}
+
+.tienda-img img {
+  border: 2px solid #581318;
+}
+
+/* ------ GRIDS ------ */
 .valores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -546,6 +271,7 @@ h3 {
   text-align: center;
   margin-top: 2rem;
 }
+
 .valores-grid .valor img {
   width: 60px;
   height: auto;
@@ -561,13 +287,244 @@ h3 {
   color: #2f2f2f;
 }
 
-/* Grid de dos columnas */
 .grid-dos-columnas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
+/*------ PORTADA ------ */
+.portada .texto {
+  text-align: center;
+}
+
+.productos-especialidades .flex-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.productos-especialidades .producto .imagen {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.productos-especialidades .producto .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  border-radius: 12px;
+}
+
+.sobre-fika {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sobre-fika > p {
+  max-width: 65ch;
+  margin: 0.5rem auto;
+}
+.sobre-fika .valor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sobre-fika .valor .img-icono {
+  width: 70px;
+  margin-bottom: 0.5rem;
+}
+
+.cta {
+  text-align: center;
+  margin: 1rem 0;
+}
+.cta p {
+  margin-bottom: 2rem;
+}
+
+.testimonios .testimonios-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.testimonios .testimonial {
+  background-color: #f2e0c9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #581318;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 250px;
+}
+.testimonios .testimonial p {
+  margin-bottom: 0.5rem;
+}
+.testimonios .testimonial span {
+  font-weight: bold;
+  color: #581318;
+}
+
+.espacio p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+/* ------ CONTACTO ------ */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.contacto-grid > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.reserva-col,
+.sugerencia-col {
+  display: flex;
+  flex-direction: column;
+  background-color: #EADBC8;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #581318;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contacto-derecha {
+  display: flex;
+  flex-direction: column;
+  background-color: #EADBC8;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #581318;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ------ NOSOTROS ------ */
+.hero-nosotros {
+  background-color: #F5F0E6;
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  border: 2px solid #581318;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-nosotros h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #581318;
+  margin: 1rem;
+  font-family: "Playfair Display", seriff;
+}
+.hero-nosotros p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #2f2f2f;
+}
+
+.mision-vision h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #581318;
+  margin: 0.8rem;
+  font-family: "Playfair Display", seriff;
+}
+.mision-vision p {
+  max-width: 700px;
+  margin: 0.5rem auto 2rem auto;
+  color: #2f2f2f;
+}
+
+.equipo-espacio .flex-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.equipo-espacio .tres-columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.equipo-espacio .tres-columnas img {
+  width: 100%;
+  border-radius: 8px;
+}
+.equipo-espacio img {
+  border-radius: 12px;
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.productos-nosotros .tienda-img > div {
+  text-align: center;
+}
+.productos-nosotros .tienda-img > div img {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* ------ TIENDA ------ */
+.tostado-suave,
+.tostado-intenso {
+  background-color: #F5F0E6;
+  padding: 2rem 0;
+}
+
+.tostado-medio,
+.bloque-productos.pack {
+  background-color: #EADBC8;
+  padding: 2rem 0;
+}
+
+.tienda .precio-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.tienda .btn-comprar {
+  margin-left: 2rem;
+  width: 100px;
+}
+.tienda .precio {
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ------ RESPONSIVE ------ */
 @media (max-width: 1024px) {
   .productos-especialidades .producto {
     justify-content: flex-start;
@@ -578,6 +535,7 @@ h3 {
 }
 @media (max-width: 768px) {
   header .header {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
   }
@@ -588,46 +546,49 @@ h3 {
   .tres-columnas {
     grid-template-columns: 1fr;
   }
-  .valores-grid {
+  .valor-grid {
     grid-template-columns: 1fr;
   }
   .contacto-grid {
     grid-template-columns: 1fr;
   }
-  .productos-dos-columnas {
-    gap: 1rem;
-  }
   .producto-mes {
     width: 100%;
   }
-  .productos-nosotros .grid-dos-columnas {
+  .testimonios .row {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
     align-items: center;
-  }
-  .productos-nosotros .grid-dos-columnas > div {
-    width: 100%;
     text-align: center;
-  }
-  .productos-nosotros .grid-dos-columnas img {
-    width: auto;
-    max-width: 200px;
-    height: auto;
-  }
-  .producto-mes img {
-    max-height: 200px;
-    height: auto;
-  }
-  .testimonios .testimonios-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
     gap: 1.5rem;
   }
   .testimonios .testimonial {
     max-width: 90%;
+    margin: 0 auto;
+  }
+  .grid-dos-columnas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .productos-nosotros .tienda-img > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .productos-nosotros .tienda-img > div img {
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+  .equipo-espacio .tres-columnas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .equipo-espacio img {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 

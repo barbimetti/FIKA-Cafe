@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ PRODUCTOS ------ */
+.producto {
+    @include m.flex-gen(column, space-between);
+    @include m.contenedor-form(v.$blanco, v.$gap-md, 12px, 1px solid v.$vino);
+}
+
+.producto {
+    h3 {
+        margin-bottom: 0.3rem;
+        color: v.$vino;
+    }
+    p {
+        font-size: 0.95rem;
+        margin-bottom: v.$gap-sm;
+    }
+    span {
+        font-weight: bold;
+        display: block;
+        margin-bottom: v.$gap-sm;
+    }
+}
+
+//* Producto del mes / columna derecha *//
+.producto-mes {
+    @include m.flex-gen(column, center, center, center);
+    @include m.contenedor-form(v.$blanco, v.$gap-md, 12px, 2px solid v.$vino);
+    flex: 1;
+}
+
+.producto-mes {
+    h3 {
+    margin-bottom: 0.5rem;
+    color: v.$vino;
+    }
+    p {
+        font-size: 0.95rem;
+        margin-bottom: v.$gap-md;
+    }
+    img {
+        @include m.imagen-full($radius: 12px, $height: 350px, $fit: cover);
+    }
+    span {
+        font-weight: bold;
+        display: block;
+        margin-bottom: v.$gap-sm;
+        color: v.$gris;
+    }
+    
+}

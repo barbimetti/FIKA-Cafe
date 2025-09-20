@@ -1,0 +1,71 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ NOSOTROS ------ */
+.hero-nosotros {
+    @include m.contenedor-form(v.$beige, 4rem 2rem);
+    @include m.flex-gen(column, center, center, center);
+
+    h1 {
+        @include m.titulo(2.5rem, center, v.$vino, v.$gap-md, v.$fuente-titulos);
+    }
+
+    p {
+        @include m.titulo(1.2rem, center, v.$gris);
+    }
+}
+
+//* Misión y Visión *//
+.mision-vision {
+    h2 {
+        @include m.titulo(1.8rem, center, v.$vino, 0.8rem, v.$fuente-titulos);
+    }
+
+    p {
+        max-width: 700px;
+        margin: v.$gap-sm auto v.$gap-lg auto;
+        color: v.$gris;
+    }
+}
+
+//* Equipo / Espacio *//
+.equipo-espacio {
+    .flex-section {
+        @include m.flex-gen(row, flex-start, center, null, wrap);
+        gap: v.$gap-lg;
+        margin: v.$gap-lg 0;
+    }
+
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: v.$gap-lg;
+        align-items: center;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    img {
+        border-radius: 12px;
+        height: 300px;
+        object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+//* ------ Sección Productos Nosotros ------ *//
+.productos-nosotros {
+    .tienda-img{
+        >div {
+            text-align: center; // centra títulos y párrafos
+        
+            img {
+            display: block;
+            margin: v.$gap-md auto; // centra la imagen en desktop
+            }
+        }
+    }        
+}

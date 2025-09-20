@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ CONTACTO ------ */
+.contacto-grid {
+    @include m.grid-gen($columns: 2fr 1fr, $gap: v.$gap-lg, $align: stretch);
+}
+
+//* ------ COLUMNA IZQUIERDA (cards) ------ *//
+.contacto-grid {
+    >div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: v.$gap-md;
+        align-items: center;
+    }
+}
+
+//* Cards internas *//
+.reserva-col,
+.sugerencia-col {
+    @include m.flex-gen(column);
+    @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
+    width: 100%;
+    max-width: 600px; // limita ancho en desktop
+}
+
+
+//* ------ COLUMNA DERECHA (info contacto) ------ *//
+.contacto-derecha {
+    @include m.flex-gen(column);
+    @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
+    width: 100%;
+}

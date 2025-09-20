@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ FORMULARIOS ------ */
+
+.formulario, 
+form {
+    @include m.contenedor-form(); 
+}
+
+//* Flex solo en el form *//
+form {
+    @include m.flex-gen(column, center, center);
+    max-width: 600px;
+    margin: 0;
+}
+
+//* Labels para inputs *//
+form > label {
+    margin-bottom: v.$gap-sm;
+    font-weight: bold;
+    color: v.$vino;
+}
+
+//* Inputs y textarea *//
+form > input,
+form > textarea {
+    width: 100%;
+    margin-bottom: v.$gap-md;
+    background-color: v.$beige;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+

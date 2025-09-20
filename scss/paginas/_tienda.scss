@@ -1,0 +1,36 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ TIENDA ------ */
+
+//*Fondos suaves por tipo de tueste y packs*//
+.tostado-suave,
+.tostado-intenso {
+    background-color: v.$beige;
+    padding: v.$gap-lg 0;
+}
+
+.tostado-medio,
+.bloque-productos.pack {
+    background-color: v.$beige-medio;
+    padding: v.$gap-lg 0;
+}
+
+.tienda {
+
+    // Contenedor del precio y botón alineado abajo de la lista
+    .precio-acciones {
+        @include m.flex-gen($direction: column,$align: flex-start, $gap: v.$gap-sm);
+    }
+
+    .btn-comprar {
+        margin-left: v.$gap-lg;
+        width: 100px;
+    }
+
+    .precio {
+        margin-left: v.$gap-lg;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,91 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/*------ PORTADA ------ */
+.portada {
+    .texto {
+        text-align: center;
+    }
+}
+
+//* Especialidades del mes *//
+.productos-especialidades {
+    .flex-section {
+        @include m.flex-gen($align: flex-start);
+        gap: v.$gap-lg;
+        margin: v.$gap-lg 0;
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        .imagen {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 60%;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+//* Valores / Filosofía *//
+.sobre-fika {
+    margin-top: v.$gap-lg;
+    @include m.flex-gen(column, center, center, center);
+
+    >p {
+        max-width: 65ch;
+        margin: v.$gap-sm auto;
+    }
+
+    .valor {
+        @include m.flex-gen(column, center, center, center);
+
+        .img-icono {
+            width: 70px;
+            margin-bottom: v.$gap-sm;
+        }
+    }
+}
+
+//* CTA *//
+.cta {
+    @include m.titulo($align: center, $margin: v.$gap-md 0);
+    p {
+        margin-bottom: v.$gap-lg;
+    }
+}
+
+//* Testimonios *//
+.testimonios {
+    .testimonios-grid {
+        @include m.flex-gen($wrap: wrap, $justify: center);
+        gap: v.$gap-lg;
+    }
+
+    .testimonial {
+        @include m.tarjeta(v.$beige-claro, v.$gap-md, 8px, 1px solid v.$vino, 300px);
+        flex: 1 1 250px;
+
+        p {
+            margin-bottom: v.$gap-sm;
+        }
+
+        span {
+            font-weight: bold;
+            color: v.$vino;
+        }
+    }
+}
+
+//* Descubrí nuestro espacio *//
+.espacio p {
+    @include m.flex-gen(column, center, center, center);
+    margin-bottom: 0.8rem;
+}

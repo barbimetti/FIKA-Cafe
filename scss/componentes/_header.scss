@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ HEADER ------ */
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: v.$vino;
+}
+
+header {
+    background-color: v.$beige-claro;
+    padding: 0.3rem 0;
+    position: relative;
+}
+
+#header {
+    @include m.flex-gen (row, space-between,center)
+}
+
+#header{
+    nav{
+        ul {
+            @include m.flex-gen (null, null, center);
+            column-gap: 15px;
+        }
+        a {
+            color: v.$vino;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: v.$gap-md;
+        }  
+    }
+}
+
+/* Para navbar en desktop/tablet/móvil */
+.navbar {
+    background-color: v.$beige-claro !important;
+    .nav-link {
+        color: v.$vino !important;
+        font-weight: bold;
+        &:hover {
+            color: v.$gris !important;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* ------ IMÁGENES ------ */
+img {
+    @include m.imagen-full($max-width: 100%, $height:auto, $radius: 8px);
+}
+
+//* Clases específicas de imágenes *//
+.img-pequeña {
+    width: 200px;
+}
+
+//* Iconos pequeños o fotos secundarias *//
+.img-icono {
+    width: 60px;
+    height: auto;
+}
+
+.tienda-img img {
+    border: 2px solid v.$vino;
+}

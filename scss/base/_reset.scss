@@ -1,5 +1,8 @@
-@use 'variables' as v;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
 
+
+/* ------ GENERALES BÁSICOS ------ */
 * {
     margin: 0;
     padding: 0;
@@ -14,10 +17,10 @@ body {
     line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.contenedor {
+    max-width: v.$max-width-contenedor;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
 li {
@@ -26,10 +29,4 @@ li {
 
 p {
     margin-bottom: 0.3rem;
-}
-
-.contenedor {
-    max-width: v.$max-width;
-    margin: 0 auto;
-    padding: 10px 20px;
 }
