@@ -1,0 +1,16 @@
+# Carpeta de CSS compilados (se generan a partir de SCSS)
+css/
+*.css.map
+
+# Dependencias (si usás Node en algún momento)
+node_modules/
+
+# Archivos del sistema (MacOS)
+.DS_Store
+
+
+
+
+
+
+
