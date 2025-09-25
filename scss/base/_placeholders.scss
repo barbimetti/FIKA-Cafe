@@ -1,0 +1,101 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+/* -------------------
+   PLACEHOLDERS
+------------------- */
+
+// Contenedor centrado de secciones
+%section-center {
+    @include m.contenedor-form(v.$beige, 4rem 2rem);
+    @include m.flex-gen(column, center, center, center);
+}
+
+// Títulos principales
+%titulo-principal {
+    @include m.titulo(2.5rem, center, v.$vino, v.$gap-md, v.$fuente-titulos);
+}
+
+// Títulos secundarios
+%titulo-secundario {
+    @include m.titulo(1.8rem, center, v.$vino, 0.8rem, v.$fuente-titulos);
+}
+
+// Imágenes redondeadas (centradas y responsivas)
+%img-base {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+%img-producto {
+    @extend %img-base;
+    height: 350px;
+    border-radius: 12px;
+}
+
+%img-icono {
+    @extend %img-base;
+    width: 60px;
+}
+
+
+
+// Texto centrado con ancho máximo
+%text-center-max {
+    text-align: center;
+    max-width: 700px;
+    margin: v.$gap-sm auto v.$gap-lg auto;
+    color: v.$gris;
+}
+
+// Placeholder para cards de contacto (izquierda)
+// Wrapper que contiene las dos cards (columna izquierda)
+%card-contacto-wrapper {
+    @include m.flex-gen(column);
+    gap: v.$gap-md;
+    align-items: center;
+    width: 100%;
+}
+
+// Estilos de cada card individual (reserva y sugerencia)
+%card-contacto {
+    @include m.flex-gen(column);
+    @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
+    width: 100%;
+    max-width: 600px;
+}
+
+%card-base {
+    @include m.flex-gen(column);
+    @include m.contenedor-form(v.$blanco, v.$gap-md, 12px, 1px solid v.$vino);
+    width: 100%;
+}
+
+%btn-pequeno {
+    width: 100px;
+    margin-left: v.$gap-lg;
+}
+
+%texto-precio {
+    margin-left: v.$gap-lg;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+%label-form {
+    margin-bottom: v.$gap-sm;
+    font-weight: bold;
+    color: v.$vino;
+}
+
+%input-base {
+    width: 100%;
+    margin-bottom: v.$gap-md;
+    background-color: v.$beige;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

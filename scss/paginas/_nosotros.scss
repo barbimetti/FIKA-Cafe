@@ -1,34 +1,32 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/placeholders';
 
 /* ------ NOSOTROS ------ */
 .hero-nosotros {
-    @include m.contenedor-form(v.$beige, 4rem 2rem);
-    @include m.flex-gen(column, center, center, center);
+    @extend %section-center;
 
     h1 {
-        @include m.titulo(2.5rem, center, v.$vino, v.$gap-md, v.$fuente-titulos);
+        @extend %titulo-principal;
     }
 
     p {
-        @include m.titulo(1.2rem, center, v.$gris);
+        @extend %text-center-max;
     }
 }
 
-//* Misión y Visión *//
+/* Misión y Visión */
 .mision-vision {
     h2 {
-        @include m.titulo(1.8rem, center, v.$vino, 0.8rem, v.$fuente-titulos);
+        @extend %titulo-secundario;
     }
 
     p {
-        max-width: 700px;
-        margin: v.$gap-sm auto v.$gap-lg auto;
-        color: v.$gris;
+        @extend %text-center-max;
     }
 }
 
-//* Equipo / Espacio *//
+/* Equipo / Espacio */
 .equipo-espacio {
     .flex-section {
         @include m.flex-gen(row, flex-start, center, null, wrap);
@@ -41,31 +39,54 @@
         grid-template-columns: repeat(3, 1fr);
         gap: v.$gap-lg;
         align-items: center;
-
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
     }
 
     img {
-        border-radius: 12px;
+        @extend %img-base;
+        width: 100%;
+        max-width: 400px;
         height: 300px;
-        object-fit: cover;
-        max-width: 100%;
+    }
+
+    // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        .tres-columnas {
+            grid-template-columns: 1fr;
+            text-align: center; // centra título y textos
+        }
+
+        img {
+            max-width: 90%;
+            margin: 0 auto;
+        }
     }
 }
 
-//* ------ Sección Productos Nosotros ------ *//
+/* Productos Nosotros */
 .productos-nosotros {
-    .tienda-img{
+    .tienda-img {
         >div {
-            text-align: center; // centra títulos y párrafos
-        
+            text-align: center;
+
             img {
-            display: block;
-            margin: v.$gap-md auto; // centra la imagen en desktop
+                display: block;
+                margin: v.$gap-md auto; // centra la imagen
+                @extend %img-base;
             }
         }
-    }        
+    }
+
+    // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        .tienda-img {
+            >div {
+                @include m.flex-gen(column, center, center); // centra contenido
+
+                img {
+                    max-width: 80%;
+                    margin-bottom: v.$gap-md;
+                }
+            }
+        }
+    }
 }

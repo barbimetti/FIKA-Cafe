@@ -13,33 +13,45 @@ header {
     background-color: v.$beige-claro;
     padding: 0.3rem 0;
     position: relative;
-}
 
-#header {
-    @include m.flex-gen (row, space-between,center)
-}
+    .header {  // nesting para la clase .header dentro de header
+        @include m.flex-gen(row, space-between, center);
 
-#header{
-    nav{
-        ul {
-            @include m.flex-gen (null, null, center);
-            column-gap: 15px;
+        // === MEDIA QUERY NESTED ===
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: v.$gap-md;
         }
-        a {
-            color: v.$vino;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: v.$gap-md;
-        }  
+
+        nav {
+            ul {
+                @include m.flex-gen(null, null, center);
+                column-gap: 15px;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: v.$gap-sm;
+                }
+            }
+            a {
+                color: v.$vino;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: v.$gap-md;
+            }
+        }
     }
 }
 
-/* Para navbar en desktop/tablet/móvil */
+/* Navbar */
 .navbar {
     background-color: v.$beige-claro !important;
+
     .nav-link {
         color: v.$vino !important;
         font-weight: bold;
+
         &:hover {
             color: v.$gris !important;
         }

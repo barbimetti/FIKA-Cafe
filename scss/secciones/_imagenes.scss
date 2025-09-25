@@ -1,9 +1,11 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/placeholders';
 
 /* ------ IMÁGENES ------ */
 img {
-    @include m.imagen-full($max-width: 100%, $height:auto, $radius: 8px);
+    @extend %img-base;
+    @include m.imagen-full($max-width: 100%, $height:auto); // si quieres mantener mixin
 }
 
 //* Clases específicas de imágenes *//
@@ -13,8 +15,7 @@ img {
 
 //* Iconos pequeños o fotos secundarias *//
 .img-icono {
-    width: 60px;
-    height: auto;
+    @extend %img-icono;
 }
 
 .tienda-img img {

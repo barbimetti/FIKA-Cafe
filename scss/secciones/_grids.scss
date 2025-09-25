@@ -1,5 +1,6 @@
 @use '../base/mixins' as m;
 @use '../base/variables' as v;
+@use '../base/placeholders';
 
 
 /* ------ GRIDS ------ */
@@ -11,23 +12,31 @@
 .valores-grid {
     .valor {
         img {
-            width: 60px;
-            height: auto;
-            margin-bottom: 0.5rem;
+            @extend %img-icono;
+            margin-bottom: 0.5rem; 
         }
         h3 {
+            @extend %titulo-secundario;
             margin-top: 0.5rem;
             margin-bottom: 0.3rem;
-            color: v.$vino;
         }
         p {
             font-size: 0.95rem;
             color: v.$gris;
         }
     }
+    // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 //* Grid de 2 columnas *//
 .grid-dos-columnas {
     @include m.grid-gen($columns: repeat(2, 1fr), $gap: v.$gap-lg);
+     // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        text-align: center; // mejora la lectura
+    }
 }

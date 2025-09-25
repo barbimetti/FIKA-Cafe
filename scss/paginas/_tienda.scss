@@ -1,5 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/placeholders';
 
 /* ------ TIENDA ------ */
 
@@ -24,13 +25,10 @@
     }
 
     .btn-comprar {
-        margin-left: v.$gap-lg;
-        width: 100px;
+        @extend %btn-pequeno;
     }
-
+    
     .precio {
-        margin-left: v.$gap-lg;
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
+        @extend %texto-precio;
+    }    
 }

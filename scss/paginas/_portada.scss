@@ -1,5 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/placeholders';
+
 
 /*------ PORTADA ------ */
 .portada {
@@ -32,7 +34,19 @@
             }
         }
     }
+
+    // === MEDIA QUERY NESTED === //
+    @media (max-width: 1024px) {
+        .producto {
+            justify-content: flex-start;
+
+            .texto {
+                margin-top: 0.8rem;
+            }
+        }
+    }
 }
+
 
 //* Valores / Filosofía *//
 .sobre-fika {
@@ -48,8 +62,8 @@
         @include m.flex-gen(column, center, center, center);
 
         .img-icono {
+            @extend %img-icono;
             width: 70px;
-            margin-bottom: v.$gap-sm;
         }
     }
 }
@@ -57,6 +71,7 @@
 //* CTA *//
 .cta {
     @include m.titulo($align: center, $margin: v.$gap-md 0);
+
     p {
         margin-bottom: v.$gap-lg;
     }
@@ -80,6 +95,18 @@
         span {
             font-weight: bold;
             color: v.$vino;
+        }
+    }
+
+    // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        .row {
+            @include m.flex-gen(column, center, center, center, null, 1.5rem);
+        }
+
+        .testimonial {
+            max-width: 90%;
+            margin: 0 auto;
         }
     }
 }

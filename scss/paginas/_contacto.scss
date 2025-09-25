@@ -1,34 +1,31 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/placeholders';
 
 /* ------ CONTACTO ------ */
 .contacto-grid {
     @include m.grid-gen($columns: 2fr 1fr, $gap: v.$gap-lg, $align: stretch);
-}
 
-//* ------ COLUMNA IZQUIERDA (cards) ------ *//
-.contacto-grid {
+    // Columna izquierda (cards)
     >div:first-child {
-        display: flex;
-        flex-direction: column;
-        gap: v.$gap-md;
-        align-items: center;
+        @extend %card-contacto-wrapper;
+    }
+
+    // === MEDIA QUERY NESTED ===
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
     }
 }
 
-//* Cards internas *//
-.reserva-col,
-.sugerencia-col {
-    @include m.flex-gen(column);
-    @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
-    width: 100%;
-    max-width: 600px; // limita ancho en desktop
-}
+    // Cards internas
+    .reserva-col,
+    .sugerencia-col {
+        @extend %card-contacto;
+    }
 
-
-//* ------ COLUMNA DERECHA (info contacto) ------ *//
-.contacto-derecha {
-    @include m.flex-gen(column);
-    @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
-    width: 100%;
-}
+    // Columna derecha (info contacto)
+    .contacto-derecha {
+        @include m.flex-gen(column);
+        @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
+        width: 100%;
+    }
