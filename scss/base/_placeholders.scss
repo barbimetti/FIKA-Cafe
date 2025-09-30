@@ -1,9 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-/* -------------------
-   PLACEHOLDERS
-------------------- */
+/* ------ PLACEHOLDERS ------ */
 
 // Contenedor centrado de secciones
 %section-center {
@@ -21,27 +19,15 @@
     @include m.titulo(1.8rem, center, v.$vino, 0.8rem, v.$fuente-titulos);
 }
 
-// Imágenes redondeadas (centradas y responsivas)
-%img-base {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
 
 %img-producto {
-    @extend %img-base;
     height: 350px;
     border-radius: 12px;
 }
 
 %img-icono {
-    @extend %img-base;
     width: 60px;
 }
-
-
 
 // Texto centrado con ancho máximo
 %text-center-max {
@@ -52,12 +38,13 @@
 }
 
 // Placeholder para cards de contacto (izquierda)
-// Wrapper que contiene las dos cards (columna izquierda)
 %card-contacto-wrapper {
     @include m.flex-gen(column);
     gap: v.$gap-md;
     align-items: center;
     width: 100%;
+    opacity: 0; // comienza invisible
+    animation: fadeUp 0.8s ease forwards;
 }
 
 // Estilos de cada card individual (reserva y sugerencia)

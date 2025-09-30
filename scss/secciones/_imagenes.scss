@@ -4,8 +4,8 @@
 
 /* ------ IMÁGENES ------ */
 img {
-    @extend %img-base;
-    @include m.imagen-full($max-width: 100%, $height:auto); // si quieres mantener mixin
+    @include m.imagen-full($max-width: 100%, $height: auto); 
+    border-radius: 8px;
 }
 
 //* Clases específicas de imágenes *//
@@ -15,8 +15,14 @@ img {
 
 //* Iconos pequeños o fotos secundarias *//
 .img-icono {
-    @extend %img-icono;
+    display: inline-block; // importante para que funcione la rotación
+    transition: transform 0.3s ease;
+
+    &:hover {
+        animation: giro360 0.6s linear forwards;
+    }
 }
+
 
 .tienda-img img {
     border: 2px solid v.$vino;

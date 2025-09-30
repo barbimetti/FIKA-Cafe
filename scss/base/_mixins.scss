@@ -7,7 +7,8 @@
     border: $border;
     border-radius: $border-radius;
     padding: $padding;
-    width: $width;
+    width: 100px;
+    ;
     font-size: $font-size;
     cursor: pointer;
     text-decoration: none;
@@ -17,33 +18,37 @@
 @mixin boton-hover($hover: v.$hover-vino) {
     &:hover {
         background-color: $hover;
+        animation: bounceButton 0.6s ease 1;
     }
 }
-
+@mixin hover-efecto {
+    transition: filter 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    filter: brightness(90%);
+    transform: translateY(-7px);
+}
 
 //* Mixin genérico para contenedores *//
 @mixin contenedor-form($bg: v.$beige-rosado, $padding: v.$gap-md v.$gap-lg, $border-radius: 8px, $border: 2px solid v.$vino, $gap: null) {
-    @if $bg != null {
+    @if $bg !=null {
         background-color: $bg;
     }
 
-    @if $padding != null {
+    @if $padding !=null {
         padding: $padding;
     }
 
-    @if $border-radius != null {
+    @if $border-radius !=null {
         border-radius: $border-radius;
     }
 
-    @if $border != null {
+    @if $border !=null {
         border: $border;
     }
 
-    @if $gap != null {
+    @if $gap !=null {
         gap: $gap;
     }
 }
-
 
 //* Mixin genérico para flex *//
 @mixin flex-gen($direction: null,
@@ -76,45 +81,6 @@
 
     @if $gap !=null {
         gap: $gap;
-    }
-}
-
-//* Mixin genérico para grid *//
-@mixin grid-gen($columns: null,
-    $rows: null,
-    $gap: null,
-    $align: null,
-    $justify: null,
-    $areas: null,
-    $flow: null) {
-    display: grid;
-
-    @if $columns !=null {
-        grid-template-columns: $columns;
-    }
-
-    @if $rows !=null {
-        grid-template-rows: $rows;
-    }
-
-    @if $gap !=null {
-        gap: $gap;
-    }
-
-    @if $align !=null {
-        align-items: $align;
-    }
-
-    @if $justify !=null {
-        justify-items: $justify;
-    }
-
-    @if $areas !=null {
-        grid-template-areas: $areas;
-    }
-
-    @if $flow !=null {
-        grid-auto-flow: $flow;
     }
 }
 
@@ -190,7 +156,6 @@
     gap: $padding;
 }
 
-
 //* Mixin genérico para imagenes *//
 @mixin imagen-full($height: auto,
     $fit: cover,
@@ -218,10 +183,8 @@
         border: $border;
     }
 
-    display: block; // saca los espacios en imágenes inline
+    display: block;
 }
-
-
 
 //* Mixin genérico para grids *//
 @mixin grid-gen($columns: null,
@@ -257,3 +220,4 @@
         text-align: $text-align;
     }
 }
+

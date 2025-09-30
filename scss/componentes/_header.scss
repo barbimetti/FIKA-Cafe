@@ -12,36 +12,12 @@
 header {
     background-color: v.$beige-claro;
     padding: 0.3rem 0;
-    position: relative;
-
-    .header {  // nesting para la clase .header dentro de header
-        @include m.flex-gen(row, space-between, center);
-
-        // === MEDIA QUERY NESTED ===
-        @media (max-width: 768px) {
-            display: flex;
-            flex-direction: column;
-            gap: v.$gap-md;
-        }
-
-        nav {
-            ul {
-                @include m.flex-gen(null, null, center);
-                column-gap: 15px;
-
-                @media (max-width: 768px) {
-                    flex-direction: column;
-                    gap: v.$gap-sm;
-                }
-            }
-            a {
-                color: v.$vino;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: v.$gap-md;
-            }
-        }
-    }
+    position: fixed; // ahora queda fijo al scrollear
+    top: 0;
+    border-bottom: 2px solid v.$vino;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Navbar */
@@ -49,11 +25,32 @@ header {
     background-color: v.$beige-claro !important;
 
     .nav-link {
-        color: v.$vino !important;
+        position: relative;
+        color: v.$vino;
         font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
 
         &:hover {
-            color: v.$gris !important;
+            color: v.$gris;
+            transform: scale(1.05);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0%;
+            height: 2px;
+            background-color: v.$vino;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
         }
     }
+
 }

@@ -28,4 +28,6 @@
         @include m.flex-gen(column);
         @include m.contenedor-form(v.$beige-medio, v.$gap-md, 8px, 1px solid v.$vino, v.$gap-lg);
         width: 100%;
+        opacity: 0; 
+        animation: fadeUp 0.8s ease forwards;
     }

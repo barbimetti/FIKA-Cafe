@@ -1,7 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 /* ------ GENERALES BÁSICOS ------ */
 * {
     margin: 0;
@@ -10,6 +9,9 @@
     font-family: v.$fuente-principal;
 }
 
+main {
+    padding-top: 80px; // altura aproximada del header
+}
 body {
     background-color: v.$beige;
     color: v.$gris;
@@ -30,3 +32,4 @@ li {
 p {
     margin-bottom: 0.3rem;
 }
+

@@ -1,5 +1,6 @@
 @use '../base/mixins' as m;
 
+
 /* ------ BOTONES ------ */
 button,
 .btn-comprar,
@@ -7,10 +8,4 @@ button,
 .btn-enviar {
   @include m.boton-gen();
   @include m.boton-hover();
-}
-
-.btn-comprar,
-.btn-reserva,
-.btn-enviar {
-  width: 100px;
 }

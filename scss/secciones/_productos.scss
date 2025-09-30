@@ -5,9 +5,7 @@
 /* ------ PRODUCTOS ------ */
 .producto {
     @extend %card-base;
-}
 
-.producto {
     h3 {
         margin-bottom: 0.3rem;
         color: v.$vino;
@@ -23,6 +21,10 @@
         display: block;
         margin-bottom: v.$gap-sm;
     }
+    &:hover {
+        @include m.hover-efecto;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
 }
 
 //* Producto del mes / columna derecha *//
@@ -31,9 +33,7 @@
     @include m.flex-gen(column, center, center, center);
     border-width: 2px;
     flex: 1;
-}
 
-.producto-mes {
     h3 {
         @extend %titulo-secundario;
     }
@@ -43,11 +43,6 @@
         margin-bottom: v.$gap-md;
     }
 
-    img {
-        @extend %img-producto;
-        @include m.imagen-full($fit: cover); // si quieres mantener mixin
-    }
-
     span {
         font-weight: bold;
         display: block;
@@ -55,7 +50,16 @@
         color: v.$gris;
     }
 
-    // === MEDIA QUERY NESTED ===
+    img {
+        border-radius: 12px;
+        height: 350px;
+    }
+
+    &:hover {
+        @include m.hover-efecto;
+        box-shadow: 0 12px 25px rgba(0,0,0,0.55);
+    }
+
     @media (max-width: 768px) {
         width: 100%;
     }

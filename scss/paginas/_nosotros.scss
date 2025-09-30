@@ -15,19 +15,24 @@
     }
 }
 
-/* Misión y Visión */
-.mision-vision {
+//* Misión y Visión 
+.productos-nosotros {
+    @extend %card-base;
+
     h2 {
         @extend %titulo-secundario;
-    }
 
-    p {
-        @extend %text-center-max;
+        p {
+            @extend %text-center-max;
+        }
     }
 }
 
-/* Equipo / Espacio */
+//* Equipo y Espacio 
 .equipo-espacio {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+
     .flex-section {
         @include m.flex-gen(row, flex-start, center, null, wrap);
         gap: v.$gap-lg;
@@ -42,37 +47,33 @@
     }
 
     img {
-        @extend %img-base;
         width: 100%;
         max-width: 400px;
         height: 300px;
     }
+}
 
-    // === MEDIA QUERY NESTED ===
-    @media (max-width: 768px) {
-        .tres-columnas {
-            grid-template-columns: 1fr;
-            text-align: center; // centra título y textos
-        }
+// === MEDIA QUERY NESTED ===
+@media (max-width: 768px) {
+    .tres-columnas {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-        img {
-            max-width: 90%;
-            margin: 0 auto;
-        }
+    img {
+        max-width: 90%;
+        margin: 0 auto;
     }
 }
 
-/* Productos Nosotros */
-.productos-nosotros {
-    .tienda-img {
-        >div {
-            text-align: center;
 
-            img {
-                display: block;
-                margin: v.$gap-md auto; // centra la imagen
-                @extend %img-base;
-            }
+//* Productos Nosotros 
+.producto-nuestro {
+    .tienda-img {
+        text-align: center;
+
+        img {
+            margin: v.$gap-md auto;
         }
     }
 
@@ -80,7 +81,7 @@
     @media (max-width: 768px) {
         .tienda-img {
             >div {
-                @include m.flex-gen(column, center, center); // centra contenido
+                @include m.flex-gen(column, center, center);
 
                 img {
                     max-width: 80%;
