@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina | FIKA Café</title>
+    
+    <title>FIKA Café | Inicio</title> <!-- SEO: título más descriptivo -->
+
+    <!-- Meta description y keywords -->
+    <meta name="description" content="FIKA Café: un espacio para disfrutar café de especialidad, postres únicos y momentos de conexión en un espacio inspirado en la tradición sueca del fika.">
+    <meta name="keywords" content="café, cafetería, fika, postres, coworking, matcha, cheesecake, crepes, Buenos Aires">
+    <meta name="author" content="FIKA Café">
+
+    <!-- SEO / redes sociales -->
+    <meta property="og:title" content="FIKA Café | Un espacio para pausar y disfrutar">
+    <meta property="og:description" content="Viví la experiencia FIKA: café de especialidad, postres artesanales y un espacio para inspirarte.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbimetti.github.io/FIKA-Cafe/">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -56,31 +68,29 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
         <!-- PORTADA -->
-        <section class="portada">
+        <section class="portada" aria-labelledby="titulo-portada"> 
             <div class="container text-center">
                 <div class="texto">
-                    <h1>BIENVENIDOS A FIKA</h1>
-                    <p>Tomate un momento para vos. En FIKA te invitamos a pausar, conectar y disfrutar de un café con
-                        alma.</p>
+                    <h1 id="titulo-portada">Bienvenidos a FIKA</h1>
+                    <p>Tomate un momento para vos. En FIKA te invitamos a pausar, conectar y disfrutar de un café con alma.</p>
                 </div>
             </div>
         </section>
 
         <!-- ESPECIALIDADES DEL MES -->
-        <section class="productos-especialidades">
+        <section class="productos-especialidades py-5" aria-labelledby="especialidades"> 
             <div class="container">
-                <h2 class="text-center mb-4">Los recomendados por el chef</h2>
+                <h2 id="especialidades" class="text-center mb-4">Los recomendados por el chef</h2>
                 <div class="row gy-4">
                     <div class="col-md-4">
                         <article class="producto d-flex flex-column h-100">
                             <div class="imagen">
                                 <img src="assets/img/Matcha latte.jpg" class="img-pequeña img-fluid"
-                                    alt="Taza-de-Matcha-latte-servido-en-FIKA">
+                                    alt="Matcha latte servido en FIKA"> 
                             </div>
                             <div class="texto">
                                 <h3>Matcha latte</h3>
-                                <p>Es una opción suave, energizante y diferente. Está hecho con té verde japonés y leche
-                                    vegetal o entera.</p>
+                                <p>Bebida suave y energizante, hecha con té verde japonés y leche vegetal o entera.</p>
                             </div>
                         </article>
                     </div>
@@ -88,12 +98,11 @@
                         <article class="producto d-flex flex-column h-100">
                             <div class="imagen">
                                 <img src="assets/img/cheesecake.jpg" class="img-pequeña img-fluid"
-                                    alt="Cheesecake-con-topping-de-pistacho">
+                                    alt="Cheesecake con topping de frambuesas">
                             </div>
                             <div class="texto">
                                 <h3>Cheesecake</h3>
-                                <p>Con una base de galletas horneadas, que destaca el equilibrio perfecto entre la
-                                    cremosidad del queso y el sabor intenso del pistacho.</p>
+                                <p>Base de galletas horneadas, cremosidad del queso y un sabor intenso de frambuesas.</p>
                             </div>
                         </article>
                     </div>
@@ -101,12 +110,11 @@
                         <article class="producto d-flex flex-column h-100">
                             <div class="imagen">
                                 <img src="assets/img/Crepes de dulce de leche.jpg" class="img-pequeña img-fluid"
-                                    alt="Crepes-de-dulce-de-leche-con-topping-de-oreo-y-chips-de-chocolate">
+                                    alt="Crepes de dulce de leche con oreo y chips de chocolate">
                             </div>
                             <div class="texto">
                                 <h3>Crepes de dulce de leche</h3>
-                                <p>Masa fina donde este mes destaco el crepe de dulce de leche con topping de oreo y
-                                    chips de chocolate finalizando con una salsa de chocolate.</p>
+                                <p>Finos crepes rellenos de dulce de leche, con oreo, chips de chocolate y salsa extra.</p>
                             </div>
                         </article>
                     </div>
@@ -115,14 +123,13 @@
         </section>
 
         <!-- VALORES / FILOSOFÍA -->
-        <section class="sobre-fika py-5">
+        <section class="sobre-fika py-5" aria-labelledby="sobre-fika">
             <div class="container">
-                <h2 class="text-center">Sobre FIKA</h2>
+                <h2 id="sobre-fika" class="text-center">Sobre FIKA</h2>
                 <p class="text-center">Más que café. Un espacio para encontrarte, crear y disfrutar.</p>
                 <p>
                     FIKA nace como un refugio urbano donde el café, las ideas y las personas se conectan. Inspirado en
-                    la
-                    tradición sueca de tomarse una pausa significativa, creamos un espacio amigable para relajarte,
+                    la tradición sueca de tomarse una pausa significativa, creamos un espacio amigable para relajarte,
                     trabajar, inspirarte y compartir.
                 </p>
 
@@ -156,18 +163,18 @@
         </section>
 
         <!-- CTA -->
-        <section class="cta text-center py-5">
+        <section class="cta text-center py-5" aria-labelledby="cta-titulo"> 
             <div class="container">
-                <h2>¡Tomate un momento para vos!</h2>
+                <h2 id="cta-titulo">¡Tomate un momento para vos!</h2>
                 <p>Reservá tu espacio y disfrutá de una experiencia FIKA única.</p>
                 <a href="./pages/contacto.html" class="btn-comprar">Reservar ahora</a>
             </div>
         </section>
 
         <!-- TESTIMONIOS -->
-        <section class="testimonios py-5">
+        <section class="testimonios py-5" aria-labelledby="testimonios-titulo"> 
             <div class="container">
-                <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+                <h2 id="testimonios-titulo" class="text-center mb-4">Lo que dicen nuestros clientes</h2>
                 <div class="row gy-4 justify-content-center align-items-stretch">
                     <div class="col-md-6 col-lg-3 d-flex">
                         <article class="testimonial d-flex flex-column justify-content-between h-100 flex-fill">
@@ -189,8 +196,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 d-flex">
                         <article class="testimonial d-flex flex-column justify-content-between h-100 flex-fill">
-                            <p>"El Matcha latte es espectacular, y el ambiente invita a trabajar y relajarse a la vez."
-                            </p>
+                            <p>"El Matcha latte es espectacular, y el ambiente invita a trabajar y relajarse a la vez."</p>
                             <span>- Javier T.</span>
                         </article>
                     </div>
@@ -199,9 +205,9 @@
         </section>
 
         <!-- DESCUBRÍ NUESTRO ESPACIO -->
-        <section class="espacio py-5">
+        <section class="espacio py-5" aria-labelledby="espacio-titulo"> 
             <div class="container">
-                <h2 class="text-center">Descubrí nuestro espacio</h2>
+                <h2 id="espacio-titulo" class="text-center">Descubrí nuestro espacio</h2>
                 <p>En FIKA diseñamos cada rincón para que te sientas como en casa. Ya sea que vengas a trabajar, a
                     compartir una charla o simplemente a disfrutar un buen café, nuestro espacio está pensado para
                     acompañarte.</p>
@@ -213,15 +219,15 @@
     <!-- FOOTER -->
     <footer class="py-3">
         <div class="contenedor footer-redes d-flex justify-content-center gap-3 mb-2">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> 
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="contenedor text-center">
             <p class="footer-texto">© 2025 FIKA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS (para navbar responsive) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

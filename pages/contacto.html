@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | FIKA Café</title>
+
+    <title>FIKA Café | Contacto</title> <!-- SEO: título más descriptivo -->
+
+    <!-- Meta description y keywords -->
+    <meta name="description" content="Contactá con FIKA Café para reservas, sugerencias o consultas. Descubrí nuestra ubicación, horarios y formas de contacto.">
+    <meta name="keywords" content="FIKA Café, contacto, reservas, sugerencias, dirección, teléfono, email, mapa, café de especialidad">
+    <meta name="author" content="FIKA Café">
+
+    <!-- SEO / Redes Sociales -->
+    <meta property="og:title" content="FIKA Café | Contacto">
+    <meta property="og:description" content="Contactá con FIKA Café para reservas, sugerencias o consultas. Descubrí nuestra ubicación, horarios y formas de contacto.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbimetti.github.io/FIKA-Cafe/pages/contacto.html">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -58,7 +70,7 @@
         <section class="portada">
             <div class="container text-center">
                 <div class="texto">
-                    <h1>CONTACTA CON NOSOTROS</h1>
+                    <h1 title="Formulario de Contacto de FIKA Café">CONTACTA CON NOSOTROS</h1>
                     <p>Cada café tiene su historia y nosotros queremos conocer la tuya.</p>
                     <p>Contáctanos y hablemos sobre cómo hacer que tu experiencia en FIKA sea aún mejor.</p>
                 </div>
@@ -66,12 +78,11 @@
         </section>
 
         <!-- Contacto: formulario + info -->
-        <!-- IMPORTANTE: en CSS es display: grid; -->
         <section class="contacto-grid container my-5">
             <!-- COLUMNA IZQUIERDA -->
             <div class="d-flex flex-column gap-3 align-items-center">
                 <div class="reserva-col w-100">
-                    <h2>RESERVAS</h2>
+                    <h2 title="Formulario de Reservas en FIKA Café">RESERVAS</h2>
                     <form action="#" method="post">
                         <label for="nombre-reserva">Nombre:</label>
                         <input type="text" name="nombre-reserva" id="nombre-reserva" required>
@@ -90,7 +101,7 @@
                 </div>
 
                 <div class="sugerencia-col w-100">
-                    <h2>SUGERENCIAS</h2>
+                    <h2 title="Formulario de Sugerencias y Opiniones">SUGERENCIAS</h2>
                     <form action="#" method="post">
                         <label for="nombre-sugerencia">Nombre:</label>
                         <input type="text" id="nombre-sugerencia" name="nombre-sugerencia" required>
@@ -111,19 +122,20 @@
 
             <!-- COLUMNA DERECHA -->
             <div class="contacto-derecha">
-                <h2>CONTACTO</h2>
+                <h2 title="Información de Contacto de FIKA Café">CONTACTO</h2>
                 <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
                 <p><strong>Mail:</strong> info@fikacafe.com</p>
 
-                <h3>Ubicación:</h3>
+                <h3 title="Ubicación de FIKA Café">Ubicación:</h3>
                 <p>Av. Siempreviva 123, CABA, Argentina</p>
 
-                <h3>HORARIOS:</h3>
+                <h3 title="Horarios de Atención de FIKA Café">HORARIOS:</h3>
                 <p>Lunes a Viernes<br />8:30 a 20:30</p>
 
                 <!-- Mapa -->
                 <div class="mapa">
                     <iframe
+                        title="Mapa de Ubicación de FIKA Café en CABA"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.123456789!2d-58.3816!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabc1234567%3A0xabcdef123456789!2sAv.%20Siempreviva%20123%2C%20CABA%2C%20Argentina!5e0!3m2!1ses-419!2sar!4v1690000000000!5m2!1ses-419!2sar"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -135,8 +147,8 @@
     <!-- Footer -->
     <footer class="py-3">
         <div class="contenedor footer-redes d-flex justify-content-center gap-3 mb-2">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> 
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="contenedor text-center">
             <p class="footer-texto">© 2025 FIKA. Todos los derechos reservados.</p>
